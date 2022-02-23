@@ -9,11 +9,14 @@
 </head>
 <body id="app" class="m-5">
     <h1 class="text-center mb-5">Condition Rendering</h1>
+    
     <h2>Films List</h2>
     <input type="text" class="mb-3 w-25" v-model="myFilm">
+    
+    <button class="btn btn-primary" @click="show()">Ajouter</button>
+
     <p class="mb-3" v-if="allFilms.length > 0" v-for="myFilm in allFilms">{{myFilm}}</p>
     <p class="mb-3" v-else>No films in list</p>
-    <button class="btn btn-primary" @click="show()">Ajouter</button>
 
     <script src="https://unpkg.com/vue@next"></script>
     <script src="index.js"></script>
